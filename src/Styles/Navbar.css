@@ -1,0 +1,126 @@
+@import url("Variables.css");
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.navbar-div-top-segment {
+  background-color: var(--color-black);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1px 8px;
+  color: var(--color-white);
+  font-size: 13px;
+  font-style: italic;
+  width: 100%;
+}
+
+.navbar-div-segment {
+  background-color: var(--color-bright-red-orange);
+  height: 4px;
+  width: 100%;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+
+.navbar-header {
+  background: url("../img/paper-background.jpg") fixed no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  padding: 2rem 1rem;
+  width: 100%;
+}
+
+.navbar-header img {
+  width: 17rem;
+  height: auto;
+}
+
+.navbar-header nav a {
+  color: var(--color-white);
+  font-weight: bold;
+  text-decoration: none;
+  margin: 0 0.2rem;
+  align-items: center;
+  padding: 8px 28px;
+  border-radius: 4.5px;
+}
+
+/* .navbar-header nav a i {
+  padding-right: 2px;
+} */
+
+.navbar-header nav a:hover {
+  background-color: var(--color-bright-red-orange);
+  transition: 0.4s;
+}
+
+.navbar-header .navbar-social {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-header .navbar-login-button {
+  margin: 0 0.5rem 0 1rem;
+  background-color: var(--color-dark-charcoal);
+  color: var(--color-white);
+  border: none;
+  padding: 9px 25px;
+  border-radius: 4.5px;
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.18);
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.navbar-header .navbar-login-button:hover {
+  background-color: var(--color-bright-red-orange);
+  transform: translate(0, -4px);
+}
+
+.navbar-links {
+  position: absolute;
+  top: -7000px;
+  left: -2000px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  a {
+    font-size: 2rem;
+    display: block;
+  }
+}
+
+.navbar-links.active {
+  display: block;
+  top: 30%;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+/* ------------------- RESPONSIVE ------------------------ */
+@media (min-width: 1024px) {
+  .navbar-links {
+    position: initial;
+    margin: 0;
+    a {
+      font-size: 1.2rem;
+      display: inline;
+      color: var(--color-dark-charcoal);
+      background-color: var(--color-black);
+      box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.18);
+    }
+  }
+
+  .navbar-header .navbar-burger {
+    display: none;
+  }
+}
